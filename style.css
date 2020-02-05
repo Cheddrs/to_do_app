@@ -11,3 +11,28 @@ https://fontawesome.com/icons/check-square?style=solid
 
 https://fontawesome.com/icons/trash?style=solid
 */
+
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+#appHeader {
+  background: url("https://i.postimg.cc/43hBmMYq/background.jpg");
+  background-repeat: none;
+  margin-top: 1.5em;
+  margin-right: 27%;
+  margin-left: 27%;
+  border-radius: 10px;
+  padding-top: 10em;
+}
+
+#displayDay {
+  font-family: "Muli";
+  color: #ffffff;
+  padding-left: 0.5em;
+}
+
+#displayDate {
+  font-family: "Muli";
+  color: #ffffff;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+}
