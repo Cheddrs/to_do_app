@@ -14,7 +14,7 @@ Click [here](###) to view it.
 
 ## Summary
 
-This the second project I completed for the Software Development Mastermind program.
+This the second project I have completed for the Software Development Mastermind program.
 
 ## Author
 
