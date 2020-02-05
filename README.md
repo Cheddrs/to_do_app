@@ -18,4 +18,4 @@ This the second project I have completed for the Software Development Mastermind
 
 ## Author
 
-**Corey Hedberg** - _Software Developer_ - [LinkedIn](https://www.linkedin.com/in/coreyhedberg/)
+**Corey Hedberg** * _Software Developer_ * [LinkedIn](https://www.linkedin.com/in/coreyhedberg/)
