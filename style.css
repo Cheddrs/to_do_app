@@ -15,24 +15,39 @@ https://fontawesome.com/icons/trash?style=solid
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 #appHeader {
-  background: url("https://i.postimg.cc/43hBmMYq/background.jpg");
-  background-repeat: none;
+  background-image: url("https://i.postimg.cc/brgNYJxT/background.jpg");
+  background-repeat: round;
   margin-top: 1.5em;
-  margin-right: 27%;
-  margin-left: 27%;
   border-radius: 10px;
-  padding-top: 10em;
+  padding-top: 8em;
+  width: 50%;
+  margin: auto;
 }
 
 #displayDay {
   font-family: "Muli";
-  color: #ffffff;
+  color: yellow;
   padding-left: 0.5em;
 }
 
 #displayDate {
+  display: inline-block;
   font-family: "Muli";
-  color: #ffffff;
+  color: yellow;
   padding-left: 0.5em;
   padding-bottom: 0.5em;
+}
+
+#displayTime {
+  display: inline-block;
+  float: right;
+  font-family: "Muli";
+  color: yellow;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#add_item {
+  margin-top: 1.8em;
+  /* margin: auto; */
 }
