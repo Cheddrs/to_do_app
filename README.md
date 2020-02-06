@@ -6,11 +6,11 @@ Website app used to create a to-do list.
 
 <br>
 
-Click [here](###) to view it.
+Click [here](https://cheddrs.github.io/to_do_app/) to view it.
 
 <br>
 
-[insert image here]
+<image src="media/readme_screenshot.png">
 
 ## Summary
 
