@@ -89,6 +89,11 @@ function addItem() {
   console.log(todoItem);
 }
 
+// Mark to-do item as completed
+function completeItem() {
+  //
+}
+
 showDate();
 /*
 Commented out setInterval to keep from refreshing every second. Remove comment when completed.

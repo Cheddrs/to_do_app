@@ -64,3 +64,7 @@ body {
   margin-top: 1.8em;
   text-align: center;
 }
+
+#todo_list > li {
+  font-family: "Muli";
+}
