@@ -69,6 +69,30 @@ function showDate() {
   console.log(currentTime);
 }
 
+// Add a to-do list item
+function addItem() {
+  let todoItem = document.getElementById("todo_entry").value;
+  let createNode = document.createElement("li");
+  let textNode = document.createTextNode(todoItem);
+  createNode.appendChild(textNode);
+  let newItem = document.getElementById("todo_entry");
+
+  if (todoItem === "") {
+    alert("Please enter a to-do item.");
+  } else {
+    document.getElementById("todo_list").appendChild(createNode);
+
+    document.getElementById("todo_entry").value = "";
+  }
+
+  // Used for debugging purposes only. Delete when finished.
+  console.log(todoItem);
+}
+
+document.addEventListener("keyup", e => {
+  if (e.key === "Enter") addItem();
+});
+
 showDate();
 /*
 Comment out setInterval to keep from refreshing every second. Remove comment when completed.
