@@ -14,14 +14,26 @@ https://fontawesome.com/icons/trash?style=solid
 
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
+body {
+  margin-left: 30em;
+  margin-right: 30em;
+}
+
 #appHeader {
-  background-image: url("https://i.postimg.cc/brgNYJxT/background.jpg");
-  background-repeat: round;
-  margin-top: 1.5em;
+  background: #00205b;
+  margin-top: 1em;
   border-radius: 10px;
-  padding-top: 8em;
-  width: 50%;
-  margin: auto;
+  padding-top: 0.5em;
+}
+
+#displayTitle {
+  font-family: "Muli";
+  font-size: 2em;
+  font-weight: bold;
+  color: yellow;
+  padding-right: 0.5em;
+  padding-bottom: 1.5em;
+  text-align: center;
 }
 
 #displayDay {
@@ -39,6 +51,7 @@ https://fontawesome.com/icons/trash?style=solid
 }
 
 #displayTime {
+  /* border: 2px teal solid; */
   display: inline-block;
   float: right;
   font-family: "Muli";
@@ -49,4 +62,5 @@ https://fontawesome.com/icons/trash?style=solid
 
 #add_item {
   margin-top: 1.8em;
+  text-align: center;
 }

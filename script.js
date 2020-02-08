@@ -89,12 +89,8 @@ function addItem() {
   console.log(todoItem);
 }
 
-document.addEventListener("keyup", e => {
-  if (e.key === "Enter") addItem();
-});
-
 showDate();
 /*
-Comment out setInterval to keep from refreshing every second. Remove comment when completed.
+Commented out setInterval to keep from refreshing every second. Remove comment when completed.
 */
 // setInterval(showDate, 1000);
