@@ -90,9 +90,7 @@ function addItem() {
 }
 
 // Mark to-do item as completed
-function completeItem() {
-  //
-}
+function completeItem() {}
 
 showDate();
 /*
