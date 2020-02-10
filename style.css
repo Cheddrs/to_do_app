@@ -65,6 +65,13 @@ body {
   text-align: center;
 }
 
+#todo_entry,
+#button_entry {
+  background-color: #00205b;
+  color: #ffffff;
+  padding: 0.5em;
+}
+
 #todo_list > li {
   font-family: "Muli";
 }
