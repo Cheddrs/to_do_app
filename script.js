@@ -1,13 +1,3 @@
-window.onload = document.getElementById("todo_entry").focus();
-
-document.getElementById("button_entry").addEventListener("click", addItem);
-
-document.addEventListener("keypress", e => {
-  if (e.key === "Enter") {
-    addItem();
-  }
-});
-
 // Show date
 function showDate() {
   let today = new Date();
@@ -82,15 +72,15 @@ function showDate() {
 // Add a to-do list item
 function addItem() {
   let todoItem = document.getElementById("todo_entry").value;
-  let createLi = document.createElement("li");
+  let createNode = document.createElement("li");
   let textNode = document.createTextNode(todoItem);
-  createLi.appendChild(textNode);
+  createNode.appendChild(textNode);
   let newItem = document.getElementById("todo_entry");
 
   if (todoItem === "") {
     alert("Please enter a to-do item.");
   } else {
-    document.getElementById("todo_list").appendChild(createLi);
+    document.getElementById("todo_list").appendChild(createNode);
 
     document.getElementById("todo_entry").value = "";
   }
@@ -100,9 +90,8 @@ function addItem() {
 }
 
 // Mark to-do item as completed
-// function completeItem() {}
+function completeItem() {}
 
-// Initializing function(s)
 showDate();
 /*
 Commented out setInterval to keep from refreshing every second. Remove comment when completed.
