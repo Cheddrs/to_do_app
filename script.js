@@ -1,12 +1,16 @@
-window.onload = document.getElementById("todo_entry").focus();
+window.onload = document.getElementById("todo-entry").focus();
 
-document.getElementById("button_entry").addEventListener("click", addItem);
+document.getElementById("add-item-button").addEventListener("click", addItem);
 
 document.addEventListener("keypress", e => {
   if (e.key === "Enter") {
     addItem();
   }
 });
+
+document
+  .getElementById("remove-all-button")
+  .addEventListener("click", removeAllItems);
 
 // Show date
 function showDate() {
@@ -42,8 +46,8 @@ function showDate() {
   let monthOfTheYear = months[month];
   let currentDay = `${dayOfTheWeek}`;
   let currentDate = `${monthOfTheYear} ${day}, ${year}`;
-  document.getElementById("displayDay").innerHTML = currentDay;
-  document.getElementById("displayDate").innerHTML = currentDate;
+  document.getElementById("display-day").innerHTML = currentDay;
+  document.getElementById("display-date").innerHTML = currentDate;
 
   // Used for debugging. Delete when completed
   console.log(currentDay);
@@ -73,7 +77,7 @@ function showDate() {
 
   let currentTime = `${hour}:${minute} ${timeOfDay}`;
 
-  document.getElementById("displayTime").innerHTML = currentTime;
+  document.getElementById("display-time").innerHTML = currentTime;
 
   // Used for debugging. Delete when completed
   console.log(currentTime);
@@ -81,18 +85,18 @@ function showDate() {
 
 // Add a to-do list item
 function addItem() {
-  let todoItem = document.getElementById("todo_entry").value;
-  let createLi = document.createElement("li");
+  let todoItem = document.getElementById("todo-entry").value;
+  let createNewLi = document.createElement("li");
   let textNode = document.createTextNode(todoItem);
-  createLi.appendChild(textNode);
-  let newItem = document.getElementById("todo_entry");
+  createNewLi.appendChild(textNode);
+  let newItem = document.getElementById("todo-entry");
 
   if (todoItem === "") {
     alert("Please enter a to-do item.");
   } else {
-    document.getElementById("todo_list").appendChild(createLi);
+    document.getElementById("todo-list").appendChild(createNewLi);
 
-    document.getElementById("todo_entry").value = "";
+    document.getElementById("todo-entry").value = "";
   }
 
   // Used for debugging purposes only. Delete when finished.
@@ -101,7 +105,17 @@ function addItem() {
 
 // Mark to-do item as completed
 function completeItem() {
-  //
+  // target child element
+  // change style to strike-through
+  // text-decoration: line-through;
+}
+
+// Remove all items
+function removeAllItems() {
+  let allItems = document.getElementById("todo-list");
+  while (allItems.hasChildNodes()) {
+    allItems.removeChild(allItems.firstChild);
+  }
 }
 
 // Initializing function(s)

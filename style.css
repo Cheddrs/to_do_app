@@ -19,14 +19,14 @@ body {
   margin-right: 30em;
 }
 
-#appHeader {
+#app-header {
   background: #00205b;
   margin-top: 1em;
   border-radius: 10px;
   padding-top: 0.5em;
 }
 
-#displayTitle {
+#display-title {
   font-family: "Muli";
   font-size: 2em;
   font-weight: bold;
@@ -36,13 +36,13 @@ body {
   text-align: center;
 }
 
-#displayDay {
+#display-day {
   font-family: "Muli";
   color: yellow;
   padding-left: 0.5em;
 }
 
-#displayDate {
+#display-date {
   display: inline-block;
   font-family: "Muli";
   color: yellow;
@@ -50,7 +50,7 @@ body {
   padding-bottom: 0.5em;
 }
 
-#displayTime {
+#display-time {
   /* border: 2px teal solid; */
   display: inline-block;
   float: right;
@@ -60,19 +60,29 @@ body {
   padding-bottom: 0.5em;
 }
 
-#add_item {
+#add-item {
   margin-top: 1.8em;
   text-align: center;
 }
 
-#todo_entry,
-#button_entry {
+#todo-entry,
+.buttons {
+  font-family: "Muli", sans-serif;
   background-color: #00205b;
   color: #ffffff;
   padding: 0.8em;
   border: none;
 }
 
-#todo_list > li {
+#todo-list > li {
+  font-size: 1.25em;
   font-family: "Muli";
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+#todo-list > li:hover {
+  background-color: yellow;
+  font-size: 1.5em;
+  font-weight: bold;
 }
