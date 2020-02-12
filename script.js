@@ -90,11 +90,21 @@ function addItem() {
   let textNode = document.createTextNode(todoItem);
   createNewLi.appendChild(textNode);
   let newItem = document.getElementById("todo-entry");
+  let createLiComplete = document.createElement("img");
+  let createLiButton = document.createElement("img");
 
   if (todoItem === "") {
     alert("Please enter a to-do item.");
   } else {
     document.getElementById("todo-list").appendChild(createNewLi);
+
+    createLiComplete.setAttribute("src", "./media/checkmark.svg");
+
+    document.getElementById("todo-list").appendChild(createLiComplete);
+
+    createLiButton.setAttribute("src", "./media/delete.svg");
+
+    document.getElementById("todo-list").appendChild(createLiButton);
 
     document.getElementById("todo-entry").value = "";
   }
