@@ -8,6 +8,8 @@ document.addEventListener("keypress", e => {
   }
 });
 
+document.getElementById("todo-list").addEventListener("click", removeItem);
+
 document
   .getElementById("remove-all-button")
   .addEventListener("click", removeAllItems);
@@ -85,39 +87,46 @@ function showDate() {
 
 // Add a to-do list item
 function addItem() {
-  let todoItem = document.getElementById("todo-entry").value;
+  let newItem = document.getElementById("todo-entry").value;
   let createNewLi = document.createElement("li");
-  let textNode = document.createTextNode(todoItem);
+  let textNode = document.createTextNode(newItem);
   createNewLi.appendChild(textNode);
-  let newItem = document.getElementById("todo-entry");
-  let createLiComplete = document.createElement("img");
-  let createLiButton = document.createElement("img");
+  let createImgComplete = document.createElement("img");
+  let createImgDelete = document.createElement("img");
 
-  if (todoItem === "") {
+  if (newItem === "") {
     alert("Please enter a to-do item.");
   } else {
     document.getElementById("todo-list").appendChild(createNewLi);
 
-    createLiComplete.setAttribute("src", "./media/checkmark.svg");
+    createImgComplete.setAttribute("src", "./media/checkmark.svg");
+    createImgComplete.setAttribute("id", "create-img-complete");
 
-    document.getElementById("todo-list").appendChild(createLiComplete);
+    createNewLi.appendChild(createImgComplete);
 
-    createLiButton.setAttribute("src", "./media/delete.svg");
+    createImgDelete.setAttribute("src", "./media/delete.svg");
+    createImgDelete.setAttribute("id", "create-img-delete");
 
-    document.getElementById("todo-list").appendChild(createLiButton);
+    createNewLi.appendChild(createImgDelete);
 
     document.getElementById("todo-entry").value = "";
   }
 
   // Used for debugging purposes only. Delete when finished.
-  console.log(todoItem);
+  console.log(newItem);
 }
 
 // Mark to-do item as completed
-function completeItem() {
-  // target child element
-  // change style to strike-through
-  // text-decoration: line-through;
+function removeItem() {
+  let deleteTarget = document.getElementById("create-img-delete");
+  if ((e, target.deleteTarget === true)) {
+  }
+  /* let toDoItems = document.getElementById("todo-list");
+  if (e.target.classList.contains("create-li-delete")) {
+    let targetParent = e.target.parentElement;
+    toDoItems.removeChild(targetParent);
+  } */
+  console.log("testing");
 }
 
 // Remove all items

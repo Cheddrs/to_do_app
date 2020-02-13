@@ -85,3 +85,8 @@ body {
   background-color: yellow;
   font-weight: bold;
 }
+
+#create-img-complete,
+#create-img-delete:hover {
+  cursor: pointer;
+}
