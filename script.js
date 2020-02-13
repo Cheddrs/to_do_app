@@ -119,7 +119,7 @@ function addItem() {
 // Mark to-do item as completed
 function removeItem() {
   let deleteTarget = document.getElementById("create-img-delete");
-  if ((e, target.deleteTarget === true)) {
+  if (e.target.deleteTarget === true) {
   }
   /* let toDoItems = document.getElementById("todo-list");
   if (e.target.classList.contains("create-li-delete")) {
