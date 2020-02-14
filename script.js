@@ -8,7 +8,9 @@ document.addEventListener("keypress", e => {
   }
 });
 
-document.getElementById("todo-list").addEventListener("click", removeItem);
+document
+  .getElementById("create-img-delete")
+  .addEventListener("click", removeItem);
 
 document
   .getElementById("remove-all-button")
@@ -98,6 +100,7 @@ function addItem() {
     alert("Please enter a to-do item.");
   } else {
     document.getElementById("todo-list").appendChild(createNewLi);
+    createNewLi.setAttribute("id", "new-item");
 
     createImgComplete.setAttribute("src", "./media/checkmark.svg");
     createImgComplete.setAttribute("id", "create-img-complete");
@@ -118,15 +121,9 @@ function addItem() {
 
 // Mark to-do item as completed
 function removeItem() {
-  let deleteTarget = document.getElementById("create-img-delete");
-  if (e.target.deleteTarget === true) {
-  }
-  /* let toDoItems = document.getElementById("todo-list");
-  if (e.target.classList.contains("create-li-delete")) {
-    let targetParent = e.target.parentElement;
-    toDoItems.removeChild(targetParent);
-  } */
-  console.log("testing");
+  let parentNodeRemove = document.getElementById("remove-item");
+  parentNodeRemove.parentNode.removeChild(parentNodeRemove);
+  console.log("removeItem fired");
 }
 
 // Remove all items
