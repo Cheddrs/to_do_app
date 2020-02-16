@@ -91,8 +91,8 @@ function showDate() {
 function addItem() {
   let newItem = document.getElementById("todo-entry").value;
   let createNewLi = document.createElement("li");
-  let textNode = document.createTextNode(newItem);
-  createNewLi.appendChild(textNode);
+  let createNewTextNode = document.createTextNode(newItem);
+  createNewLi.appendChild(createNewTextNode);
   let createImgComplete = document.createElement("img");
   let createImgDelete = document.createElement("img");
 
@@ -120,6 +120,11 @@ function addItem() {
 }
 
 // Mark to-do item as completed
+function markAsCompleted() {
+  //
+}
+
+// Remove to-do item
 function removeItem() {
   let parentNodeRemove = document.getElementById("remove-item");
   parentNodeRemove.parentNode.removeChild(parentNodeRemove);
