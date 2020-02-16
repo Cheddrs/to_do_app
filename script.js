@@ -1,17 +1,17 @@
 window.onload = document.getElementById("todo-entry").focus();
 
-document.getElementById("add-item-button").addEventListener("click", addItem);
+document.getElementById("add-item-button").addEventListener("submit", addItem);
 
 document.addEventListener("keypress", e => {
   if (e.key === "Enter") {
     addItem();
   }
 });
-
+/*
 document
   .getElementById("create-img-delete")
   .addEventListener("click", removeItem);
-
+*/
 document
   .getElementById("remove-all-button")
   .addEventListener("click", removeAllItems);
@@ -107,12 +107,24 @@ function addItem() {
 
     createNewLi.appendChild(createImgComplete);
 
+    createImgComplete.addEventListener("click", function(e) {
+      if (e.target.idList.contains("new-item")) {
+        if (e.target.nextSibling.style.textDecoration !== "line-through") {
+          e.target.nextSibling.style.textDecoration = "line-through";
+        } else {
+          e.target.nextSibling.style.textDecoration = "none";
+        }
+      }
+    });
+
     createImgDelete.setAttribute("src", "./media/delete.svg");
     createImgDelete.setAttribute("id", "create-img-delete");
 
     createNewLi.appendChild(createImgDelete);
 
     document.getElementById("todo-entry").value = "";
+
+    document.getElementById("todo-entry").focus();
   }
 
   // Used for debugging purposes only. Delete when finished.
