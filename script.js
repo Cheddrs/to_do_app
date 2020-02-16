@@ -101,19 +101,22 @@ function addItem() {
   } else {
     document.getElementById("todo-list").appendChild(createNewLi);
     createNewLi.setAttribute("id", "new-item");
+    createNewLi.setAttribute("class", "new-item");
 
     createImgComplete.setAttribute("src", "./media/checkmark.svg");
     createImgComplete.setAttribute("id", "create-img-complete");
+    createImgComplete.setAttribute("class", "new-item");
 
     createNewLi.appendChild(createImgComplete);
 
     createImgComplete.addEventListener("click", function(e) {
-      if (e.target.idList.contains("new-item")) {
-        if (e.target.nextSibling.style.textDecoration !== "line-through") {
-          e.target.nextSibling.style.textDecoration = "line-through";
+      if (e.target.classList.contains("new-item")) {
+        if (e.target.prevSibling.style.textDecoration !== "line-through") {
+          e.target.prevSibling.style.textDecoration = "line-through";
         } else {
-          e.target.nextSibling.style.textDecoration = "none";
+          e.target.prevSibling.style.textDecoration = "none";
         }
+        console.log("fired!");
       }
     });
 
