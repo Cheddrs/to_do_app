@@ -7,41 +7,37 @@ body {
 
 #app-header {
   background: #00205b;
+  color: #ffff97;
   margin-top: 1em;
   border-radius: 10px;
   padding-top: 0.5em;
 }
 
 #display-title {
-  font-family: "Muli";
+  font-family: "Muli", sans-serif;
   font-size: 2em;
   font-weight: bold;
-  color: yellow;
   padding-right: 0.5em;
   padding-bottom: 1.5em;
   text-align: center;
 }
 
 #display-day {
-  font-family: "Muli";
-  color: yellow;
+  font-family: "Muli", sans-serif;
   padding-left: 0.5em;
 }
 
 #display-date {
   display: inline-block;
-  font-family: "Muli";
-  color: yellow;
+  font-family: "Muli", sans-serif;
   padding-left: 0.5em;
   padding-bottom: 0.5em;
 }
 
 #display-time {
-  /* border: 2px teal solid; */
   display: inline-block;
   float: right;
-  font-family: "Muli";
-  color: yellow;
+  font-family: "Muli", sans-serif;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -63,17 +59,32 @@ body {
 
 #todo-list > li {
   font-size: 1.25em;
-  font-family: "Muli";
+  font-family: "Muli", sans-serif;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
 
 #todo-list > li:hover {
-  background-color: yellow;
+  background-color: #ffff97;
   font-weight: bold;
+  border-radius: 4px;
 }
 
-#create-img-complete,
+#new-item:nth-child(odd) {
+  background-color: #acb6c9;
+  border-radius: 4px;
+}
+
+#new-item:nth-child(even) {
+  background-color: #cad1dd;
+  border-radius: 4px;
+}
+
+#create-img-complete:hover,
 #create-img-delete:hover {
   cursor: pointer;
+}
+
+#remove-all {
+  text-align: center;
 }
