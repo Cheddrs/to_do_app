@@ -146,6 +146,7 @@ function removeAllItems() {
   }
   document.getElementById("todo-entry").value = "";
 
+  // check the comment
   document.getElementById("todo-entry").focus();
 }
 
