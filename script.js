@@ -144,6 +144,9 @@ function removeAllItems() {
   while (allItems.hasChildNodes()) {
     allItems.removeChild(allItems.firstChild);
   }
+  document.getElementById("todo-entry").value = "";
+
+  document.getElementById("todo-entry").focus();
 }
 
 showDate();
