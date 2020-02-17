@@ -1,17 +1,13 @@
 window.onload = document.getElementById("todo-entry").focus();
 
-document.getElementById("add-item-button").addEventListener("submit", addItem);
+document.getElementById("add-item-button").addEventListener("click", addItem);
 
 document.addEventListener("keypress", e => {
   if (e.key === "Enter") {
     addItem();
   }
 });
-/*
-document
-  .getElementById("create-img-delete")
-  .addEventListener("click", removeItem);
-*/
+
 document
   .getElementById("remove-all-button")
   .addEventListener("click", removeAllItems);
@@ -101,29 +97,30 @@ function addItem() {
   } else {
     document.getElementById("todo-list").appendChild(createNewLi);
     createNewLi.setAttribute("id", "new-item");
-    createNewLi.setAttribute("class", "new-item");
 
-    createImgComplete.setAttribute("src", "./media/checkmark.svg");
+    createImgComplete.setAttribute("src", "media/checkmark.svg");
     createImgComplete.setAttribute("id", "create-img-complete");
-    createImgComplete.setAttribute("class", "new-item");
 
     createNewLi.appendChild(createImgComplete);
 
     createImgComplete.addEventListener("click", function(e) {
-      if (e.target.classList.contains("new-item")) {
-        if (e.target.prevSibling.style.textDecoration !== "line-through") {
-          e.target.prevSibling.style.textDecoration = "line-through";
-        } else {
-          e.target.prevSibling.style.textDecoration = "none";
-        }
-        console.log("fired!");
+      if (e.target.parentNode.style.textDecoration !== "line-through") {
+        e.target.parentNode.style.textDecoration = "line-through";
+      } else {
+        e.target.parentNode.style.textDecoration = "none";
       }
     });
 
-    createImgDelete.setAttribute("src", "./media/delete.svg");
+    createImgDelete.setAttribute("src", "media/delete.svg");
     createImgDelete.setAttribute("id", "create-img-delete");
 
     createNewLi.appendChild(createImgDelete);
+
+    createImgDelete.addEventListener("click", function(e) {
+      let todoItems = document.getElementById("todo-list");
+      let removeLi = e.target.parentElement;
+      todoItems.removeChild(removeLi);
+    });
 
     document.getElementById("todo-entry").value = "";
 
@@ -132,18 +129,6 @@ function addItem() {
 
   // Used for debugging purposes only. Delete when finished.
   console.log(newItem);
-}
-
-// Mark to-do item as completed
-function markAsCompleted() {
-  //
-}
-
-// Remove to-do item
-function removeItem() {
-  let parentNodeRemove = document.getElementById("remove-item");
-  parentNodeRemove.parentNode.removeChild(parentNodeRemove);
-  console.log("removeItem fired");
 }
 
 // Remove all items
