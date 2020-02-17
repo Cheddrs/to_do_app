@@ -126,6 +126,7 @@ function addItem() {
 
     document.getElementById("todo-entry").value = "";
 
+    // return the focus to the input field.
     document.getElementById("todo-entry").focus();
   }
 }
