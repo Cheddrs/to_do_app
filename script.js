@@ -9,10 +9,13 @@ document.addEventListener("keypress", e => {
 });
 
 document
+  .getElementById("mark-all-complete")
+  .addEventListener("click", markAllCompleted);
+
+document
   .getElementById("remove-all-button")
   .addEventListener("click", removeAllItems);
 
-// Show date
 function showDate() {
   let today = new Date();
   let weekday = today.getDay();
@@ -67,9 +70,9 @@ function showDate() {
     hour = hour - 12;
   }
 
-  if (hour < 10) {
+  /* if (hour < 10) {
     hour = "0" + hour;
-  }
+  } */
 
   if (minute < 10) {
     minute = "0" + minute;
@@ -83,7 +86,6 @@ function showDate() {
   console.log(currentTime);
 }
 
-// Add a to-do list item
 function addItem() {
   let newItem = document.getElementById("todo-entry").value;
   let createNewLi = document.createElement("li");
@@ -121,17 +123,18 @@ function addItem() {
       let removeLi = e.target.parentElement;
       todoItems.removeChild(removeLi);
     });
-
-    document.getElementById("todo-entry").value = "";
-
-    document.getElementById("todo-entry").focus();
   }
-
-  // Used for debugging purposes only. Delete when finished.
-  console.log(newItem);
 }
 
-// Remove all items
+function markAllCompleted() {
+  let fullList = document.getElementById("todo-list");
+  if (fullList.style.textDecoration !== "line-through") {
+    fullList.style.textDecoration = "line-through";
+  } else {
+    fullList.style.textDecoration = "none";
+  }
+}
+
 function removeAllItems() {
   let allItems = document.getElementById("todo-list");
   while (allItems.hasChildNodes()) {
@@ -139,9 +142,5 @@ function removeAllItems() {
   }
 }
 
-// Initializing function(s)
 showDate();
-/*
-Commented out setInterval to keep from refreshing every second. Remove comment when completed.
-*/
-// setInterval(showDate, 1000);
+setInterval(showDate, 1000);

@@ -1,16 +1,22 @@
 body {
   background-color: #cacaca;
   margin: auto;
-  margin-left: 30em;
-  margin-right: 30em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 #app-header {
   background: #00205b;
   color: #ffff97;
   margin-top: 1em;
-  border-radius: 10px;
-  padding-top: 0.5em;
+  border-radius: 8px;
+  padding-top: 0.4em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "header header"
+    "day ."
+    "date time";
 }
 
 #display-title {
@@ -18,28 +24,31 @@ body {
   font-size: 2em;
   font-weight: bold;
   padding-right: 0.5em;
-  padding-bottom: 1.5em;
+  padding-bottom: 0.5em;
   text-align: center;
+  grid-area: header;
+  align-self: center;
 }
 
 #display-day {
   font-family: "Muli", sans-serif;
   padding-left: 0.5em;
+  grid-area: day;
 }
 
 #display-date {
-  display: inline-block;
   font-family: "Muli", sans-serif;
   padding-left: 0.5em;
   padding-bottom: 0.5em;
+  grid-area: date;
 }
 
 #display-time {
-  display: inline-block;
-  float: right;
   font-family: "Muli", sans-serif;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
+  grid-area: time;
+  text-align: end;
 }
 
 #add-item {
@@ -70,6 +79,16 @@ body {
   border-radius: 4px;
 }
 
+#todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#new-item {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
 #new-item:nth-child(odd) {
   background-color: #acb6c9;
   border-radius: 4px;
@@ -80,11 +99,25 @@ body {
   border-radius: 4px;
 }
 
+#create-img-complete {
+  float: right;
+}
+
+#create-img-delete {
+  float: right;
+  padding-right: 0.5em;
+}
+
 #create-img-complete:hover,
 #create-img-delete:hover {
   cursor: pointer;
 }
 
-#remove-all {
+#bottom-buttons {
   text-align: center;
+}
+
+#mark-all-complete,
+#remove-all-button {
+  width: 160px;
 }
