@@ -16,7 +16,7 @@ Click [here](https://cheddrs.github.io/to_do_app/) to view it.
 
 This the second project I have completed for the Software Development Mastermind program.
 
-This project really pushed me to dig into the DOM manipulation between HTML and JavaScript. I really learned a lot about this topic in completing this project. It was awesome!
+This project really pushed me to dig into the DOM manipulation between HTML and JavaScript. I really learned about it in completing this project. It was awesome!
 
 ## Languages Used
 
