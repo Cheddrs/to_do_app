@@ -1,4 +1,5 @@
 body {
+  background-color: #cacaca;
   margin: auto;
   margin-left: 30em;
   margin-right: 30em;
@@ -55,6 +56,7 @@ body {
   font-family: "Muli", sans-serif;
   background-color: #00205b;
   color: #ffffff;
+  border-radius: 4px;
   padding: 0.8em;
   border: none;
 }
