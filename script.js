@@ -123,6 +123,10 @@ function addItem() {
       let removeLi = e.target.parentElement;
       todoItems.removeChild(removeLi);
     });
+
+    document.getElementById("todo-entry").value = "";
+
+    document.getElementById("todo-entry").focus();
   }
 }
 
@@ -143,4 +147,4 @@ function removeAllItems() {
 }
 
 showDate();
-setInterval(showDate, 1000);
+// setInterval(showDate, 1000);
