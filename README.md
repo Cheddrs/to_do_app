@@ -16,6 +16,8 @@ Click [here](https://cheddrs.github.io/to_do_app/) to view it.
 
 This the second project I have completed for the Software Development Mastermind program.
 
+This project really pushed me to dig into the DOM manipulation between HTML and JavaScript. I really learned a lot about this topic in completing this project. It was awesome!
+
 ## Languages Used
 
 <image src="media/html.png"> <image src="media/css.png"> <image src="media/js.png">
