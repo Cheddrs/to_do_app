@@ -18,4 +18,4 @@ This project really pushed me to dig into the DOM manipulation between HTML and 
 
 ## Author
 
-**Corey Hedberg** | _Software Developer_ | [LinkedIn](https://www.linkedin.com/in/coreyhedberg/)
+**Corey Hedberg** &bull; _Software Developer_ &bull; [LinkedIn](https://www.linkedin.com/in/coreyhedberg/)
