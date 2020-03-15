@@ -14,8 +14,6 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <script defer src="script.js"></script>
-
     <title>To-Do List App</title>
   </head>
 
@@ -29,8 +27,13 @@
 
     <!-- Add a to-do list item-->
     <section id="add-item">
-      <input type="text" id="todo-entry" placeholder="Enter item" size="68" />
-      <button type="submit" id="add-item-button" class="buttons">
+      <input id="todo-entry" type="text" placeholder="Enter item" size="68" />
+      <button
+        id="add-item-button"
+        type="submit"
+        id="add-item-button"
+        class="buttons"
+      >
         Add Item
       </button>
     </section>
@@ -40,12 +43,14 @@
     </ol>
     <!-- Clear all items button -->
     <section id="bottom-buttons">
-      <button type="submit" id="mark-all-complete" class="buttons">
+      <button id="mark-all-complete" type="submit" class="buttons">
         Mark All Completed
       </button>
-      <button type="submit" id="remove-all-button" class="buttons">
+      <button id="remove-all-button" type="submit" class="buttons">
         Clear All Items
       </button>
     </section>
+    <script src="clock.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
