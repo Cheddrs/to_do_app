@@ -2,11 +2,11 @@
 
 Website app used to create a to-do list.
 
-Click [here](https://coreyhedberg.github.io/to_do_app/) to view it.
+Click [here](https://coreyhedberg.github.io/to_do_app/) to organize your tasks.
 
 ## Languages Used
 
-<image src="media/html.svg" width="55">&nbsp; &nbsp; <image src="media/css.svg" width="55">&nbsp; &nbsp; <image src="media/js.svg" width="55">
+<image src="media/html.svg" width="55">&nbsp; &nbsp; &nbsp; <image src="media/css.svg" width="55">&nbsp; &nbsp; &nbsp; <image src="media/js.svg" width="55">
 
 ## Summary
 
