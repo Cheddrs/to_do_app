@@ -1,6 +1,6 @@
-const Clock = (function() {
+const Clock = (function () {
   return {
-    showDate: function() {
+    showDate: function () {
       let today = new Date();
       let weekday = today.getDay();
       let month = today.getMonth();
@@ -13,7 +13,7 @@ const Clock = (function() {
         "Wednesday",
         "Thursday",
         "Friday",
-        "Saturday"
+        "Saturday",
       ];
       let months = [
         "January",
@@ -27,7 +27,7 @@ const Clock = (function() {
         "September",
         "October",
         "November",
-        "December"
+        "December",
       ];
       let dayOfTheWeek = days[weekday];
       let monthOfTheYear = months[month];
@@ -57,7 +57,7 @@ const Clock = (function() {
       let currentTime = `${hour}:${minute} ${timeOfDay}`;
 
       document.getElementById("display-time").innerHTML = currentTime;
-    }
+    },
   };
 })();
 
