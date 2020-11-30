@@ -1,11 +1,11 @@
 const Clock = (function () {
   return {
     showDate: function () {
-      let today = new Date();
-      let weekday = today.getDay();
-      let month = today.getMonth();
-      let day = today.getDate();
-      let year = today.getFullYear();
+      let today = new Date()
+      let weekday = today.getDay()
+      let month = today.getMonth()
+      let day = today.getDate()
+      let year = today.getFullYear()
       let days = [
         "Sunday",
         "Monday",
@@ -14,7 +14,7 @@ const Clock = (function () {
         "Thursday",
         "Friday",
         "Saturday",
-      ];
+      ]
       let months = [
         "January",
         "February",
@@ -28,37 +28,37 @@ const Clock = (function () {
         "October",
         "November",
         "December",
-      ];
-      let dayOfTheWeek = days[weekday];
-      let monthOfTheYear = months[month];
-      let currentDay = `${dayOfTheWeek}`;
-      let currentDate = `${monthOfTheYear} ${day}, ${year}`;
-      document.getElementById("display-day").innerHTML = currentDay;
-      document.getElementById("display-date").innerHTML = currentDate;
+      ]
+      let dayOfTheWeek = days[weekday]
+      let monthOfTheYear = months[month]
+      let currentDay = `${dayOfTheWeek}`
+      let currentDate = `${monthOfTheYear} ${day}, ${year}`
+      document.getElementById("display-day").innerHTML = currentDay
+      document.getElementById("display-date").innerHTML = currentDate
 
-      let hour = today.getHours();
-      let minute = today.getMinutes();
-      let timeOfDay;
+      let hour = today.getHours()
+      let minute = today.getMinutes()
+      let timeOfDay
 
       if (hour < 12) {
-        timeOfDay = "AM";
+        timeOfDay = "AM"
       } else {
-        timeOfDay = "PM";
+        timeOfDay = "PM"
       }
 
       if (hour > 12) {
-        hour = hour - 12;
+        hour = hour - 12
       }
 
       if (minute < 10) {
-        minute = "0" + minute;
+        minute = "0" + minute
       }
 
-      let currentTime = `${hour}:${minute} ${timeOfDay}`;
+      let currentTime = `${hour}:${minute} ${timeOfDay}`
 
-      document.getElementById("display-time").innerHTML = currentTime;
+      document.getElementById("display-time").innerHTML = currentTime
     },
-  };
-})();
+  }
+})()
 
-Clock.showDate();
+Clock.showDate()

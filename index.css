@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Muli";
+  src: url("fonts/Muli.ttf");
+}
+
 body {
   background-color: #cacaca;
   margin: auto;
@@ -64,6 +69,15 @@ body {
   border-radius: 4px;
   padding: 0.8em;
   border: none;
+}
+
+.buttons:hover {
+  cursor: pointer;
+  box-shadow: 0 0 3px 3px #ffff97;
+}
+
+#todo-entry:focus {
+  box-shadow: 0 0 3px 3px #ffff97;
 }
 
 #todo-list > li {
